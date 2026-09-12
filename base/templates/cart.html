@@ -1,0 +1,93 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="cart-container">
+
+<h1 class="cart-title">Shopping Cart</h1>
+
+<div class="cart-table-wrapper">
+
+    <table class="cart-table">
+
+        <tr>
+            <th>S.No</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th>Action</th>
+        </tr>
+
+        {% for i in cart_product %}
+
+        <tr>
+
+            <td>{{ forloop.counter }}</td>
+
+            <td class="cart-product-name">
+                {{ i.pname }}
+            </td>
+
+            <td>₹{{ i.price }}</td>
+
+            <td>
+                <div class="quantity">
+
+                    <a href="{% url 'minus' i.id %}">−</a>
+
+                    <span>{{ i.quantity }}</span>
+
+                    <a href="{% url 'plus' i.id %}">+</a>
+
+                </div>
+            </td>
+
+            <td>₹{{ i.total_price }}</td>
+
+            <td>
+                <a href="{% url 'remove' i.id %}"
+                   class="remove-item">
+                    Remove
+                </a>
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+
+<div class="cart-summary">
+
+    <h2>Total Price: ₹{{ TA }}</h2>
+
+    <div class="cart-actions">
+
+        <a href="{% url 'checkout' %}">
+            <button>Proceed to Checkout</button>
+        </a>
+
+        <a href="{% url 'home' %}">
+            <button class="secondary-button">
+                Back to Home
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+{% endblock %}

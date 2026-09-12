@@ -1,0 +1,108 @@
+.support-container {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.support-card {
+    background-color: #ffffff;
+    border: 1px solid #e4e0d8;
+    padding: 45px;
+    box-shadow: 0 5px 20px rgba(40, 35, 30, 0.06);
+}
+
+.support-card h1 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #292929;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.intro {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.support-section h2,
+.contact-section h2 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e4e0d8;
+}
+
+.support-item {
+    padding: 18px 0;
+    border-bottom: 1px solid #eeeae3;
+}
+
+.support-item:last-child {
+    border-bottom: none;
+}
+
+.support-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #3d3d3d;
+    margin-bottom: 8px;
+}
+
+.support-item p,
+.contact-section p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.contact-section {
+    margin-top: 40px;
+}
+
+.contact-section p + p {
+    margin-top: 10px;
+}
+
+.contact-section strong {
+    color: #333333;
+    font-weight: 500;
+}
+
+.closing {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid #e4e0d8;
+    color: #555555;
+    font-size: 14px;
+    font-family: Georgia, serif;
+}
+
+@media (max-width: 600px) {
+
+    .support-container {
+        margin: 30px auto;
+    }
+
+    .support-card {
+        padding: 28px 22px;
+    }
+
+    .support-card h1 {
+        font-size: 27px;
+    }
+
+    .support-section h2,
+    .contact-section h2 {
+        font-size: 21px;
+    }
+}

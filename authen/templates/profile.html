@@ -1,0 +1,88 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="profile-container">
+
+<div class="profile-card">
+
+    <h1>My Profile</h1>
+
+    <div class="profile-picture">
+
+        {% if profile.pimage %}
+
+            <img src="{{ profile.pimage.url }}" alt="Profile Picture">
+
+        {% else %}
+
+            <img src="{% static 'images/butterfly.jpg' %}"
+                 alt="Profile Picture">
+
+        {% endif %}
+
+    </div>
+
+
+    <div class="profile-details">
+
+        <div class="profile-row">
+            <span>First Name</span>
+            <strong>{{ request.user.first_name }}</strong>
+        </div>
+
+        <div class="profile-row">
+            <span>Last Name</span>
+            <strong>{{ request.user.last_name }}</strong>
+        </div>
+
+        <div class="profile-row">
+            <span>Email</span>
+            <strong>{{ request.user.email }}</strong>
+        </div>
+
+        <div class="profile-row">
+            <span>Username</span>
+            <strong>{{ request.user.username }}</strong>
+        </div>
+
+    </div>
+
+
+    <div class="profile-actions">
+
+        <a href="{% url 'update_profile' %}">
+            Update Profile
+        </a>
+
+        <a href="{% url 'change_password' %}">
+            Change Password
+        </a>
+
+        <a href="{% url 'my_orders' %}">
+            My Orders
+        </a>
+
+        <a href="{% url 'logout' %}">
+            Logout
+        </a>
+
+    </div>
+
+
+    <a href="{% url 'home' %}" class="back-home">
+        Back to Home
+    </a>
+
+</div>
+
+</div>
+
+{% endblock %}

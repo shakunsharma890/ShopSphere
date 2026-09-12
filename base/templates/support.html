@@ -1,0 +1,87 @@
+
+{% extends 'main.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/support.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="support-container">
+
+    <div class="support-card">
+
+        <h1>ShopSphere Support</h1>
+
+        <p class="intro">
+            Welcome to ShopSphere Support.
+            We are here to help you with any issues you may face
+            while using our website.
+        </p>
+
+        <div class="support-section">
+
+            <h2>Common Issues</h2>
+
+            <div class="support-item">
+                <h3>Cart Issues</h3>
+                <p>
+                    If you are unable to add a product to your cart,
+                    make sure you are logged in and try again.
+                </p>
+            </div>
+
+            <div class="support-item">
+                <h3>Account Issues</h3>
+                <p>
+                    You can visit your Profile page to update your
+                    account information or change your password.
+                </p>
+            </div>
+
+            <div class="support-item">
+                <h3>Login Issues</h3>
+                <p>
+                    Please check your username and password.
+                    If you have forgotten your password, use the
+                    Forgot Password option available on the Login page.
+                </p>
+            </div>
+
+            <div class="support-item">
+                <h3>Product Issues</h3>
+                <p>
+                    If you have any questions about a product, price,
+                    category or offer, please contact our support team.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="contact-section">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                Email:
+                <strong>support@shopsphere.com</strong>
+            </p>
+
+            <p>
+                We will try our best to respond to your queries
+                as soon as possible.
+            </p>
+
+        </div>
+
+        <p class="closing">
+            Thank you for using ShopSphere.
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}
+

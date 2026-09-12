@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/product_detail.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="product-detail">
+
+<div class="product-detail-image">
+    <img src="{{ product.pimage.url }}"
+         alt="{{ product.pname }}">
+</div>
+
+<div class="product-detail-info">
+
+    <h1>{{ product.pname }}</h1>
+
+    <h2>₹{{ product.price }}</h2>
+
+    <p class="product-description">
+        {{ product.pdesc }}
+    </p>
+
+    <p class="product-category">
+        <strong>Category:</strong> {{ product.pcategory }}
+    </p>
+
+    <div class="product-detail-actions">
+
+        <a href="{% url 'add_to_cart' product.id %}">
+            <button>Add to Cart</button>
+        </a>
+
+        <a href="{% url 'buy_now' product.id %}">
+            <button>Buy Now</button>
+        </a>
+
+    </div>
+
+    <a href="{% url 'home' %}" class="back-home">
+        ← Back to Home
+    </a>
+
+</div>
+
+</div>
+
+{% endblock %}

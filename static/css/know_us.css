@@ -1,0 +1,86 @@
+.know-us-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.know-us-card {
+    background-color: #ffffff;
+    border: 1px solid #e4e0d8;
+    padding: 45px;
+    box-shadow: 0 5px 20px rgba(40, 35, 30, 0.06);
+}
+
+.know-us-card h1 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #292929;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.know-us-card h2 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.know-us-card > h2 {
+    text-align: center;
+}
+
+.know-us-card p {
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.know-us-section {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #e4e0d8;
+}
+
+.know-us-section ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.know-us-section li {
+    color: #666666;
+    font-size: 14px;
+    line-height: 2;
+    padding-left: 5px;
+}
+
+.closing {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid #e4e0d8;
+    color: #555555 !important;
+    font-family: Georgia, serif;
+}
+
+@media (max-width: 600px) {
+
+    .know-us-container {
+        margin: 30px auto;
+    }
+
+    .know-us-card {
+        padding: 28px 22px;
+    }
+
+    .know-us-card h1 {
+        font-size: 27px;
+    }
+
+    .know-us-card h2 {
+        font-size: 21px;
+    }
+}

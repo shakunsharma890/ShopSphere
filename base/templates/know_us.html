@@ -1,0 +1,59 @@
+
+{% extends 'main.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/know_us.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="know-us-container">
+
+    <div class="know-us-card">
+
+        <h1>Know Us</h1>
+
+        <h2>Welcome to ShopSphere</h2>
+
+        <p>
+            ShopSphere is an online shopping platform designed to make
+            shopping simple, convenient and enjoyable.
+        </p>
+
+        <div class="know-us-section">
+
+            <h2>What We Offer</h2>
+
+            <ul>
+                <li>Different categories of products</li>
+                <li>Trending products</li>
+                <li>Special offers</li>
+                <li>Easy shopping cart</li>
+                <li>User profile and account management</li>
+            </ul>
+
+        </div>
+
+        <div class="know-us-section">
+
+            <h2>Our Mission</h2>
+
+            <p>
+                Our mission is to provide a simple and user-friendly
+                shopping experience where customers can easily discover
+                products, manage their cart and enjoy a convenient
+                online shopping experience.
+            </p>
+
+        </div>
+
+        <p class="closing">
+            Thank you for choosing ShopSphere.
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}

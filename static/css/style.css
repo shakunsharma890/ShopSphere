@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f4ee;
+    color: #292929;
+}
+
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    padding: 17px 45px;
+
+    background-color: #ffffff;
+    border-bottom: 1px solid #e4e0d8;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo h2 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: #252525;
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================
+   NAVIGATION AREA
+   ========================= */
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   NAVIGATION LINKS
+   ========================= */
+
+.links a {
+    text-decoration: none;
+    color: #444444;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.links a:hover {
+    color: #000000;
+}
+
+
+/* =========================
+   SEARCH
+   ========================= */
+
+.links form {
+    display: flex;
+    align-items: center;
+}
+
+.links input[type="text"] {
+    width: 170px;
+    padding: 9px 12px;
+
+    border: 1px solid #d8d3ca;
+    border-radius: 4px;
+
+    background-color: #faf9f6;
+    color: #333333;
+
+    outline: none;
+    font-size: 13px;
+}
+
+.links input[type="text"]:focus {
+    border-color: #99938a;
+}
+
+
+/* =========================
+   SEARCH BUTTON
+   ========================= */
+
+.links button {
+    padding: 9px 14px;
+    margin-left: 5px;
+
+    border: 1px solid #333333;
+    border-radius: 4px;
+
+    background-color: #333333;
+    color: #ffffff;
+
+    font-size: 13px;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.links button:hover {
+    background-color: #111111;
+}
+
+
+/* =========================
+   TRENDING / OFFER
+   ========================= */
+
+.links input[type="submit"] {
+    padding: 9px 13px;
+
+    border: 1px solid #d8d3ca;
+    border-radius: 4px;
+
+    background-color: #ffffff;
+    color: #444444;
+
+    font-size: 13px;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.links input[type="submit"]:hover {
+    background-color: #f1eee8;
+    border-color: #aaa49a;
+}
+
+
+/* =========================
+   CATEGORY NAVIGATION
+   ========================= */
+
+body > center {
+    padding: 20px 20px;
+    background-color: #faf9f6;
+    border-bottom: 1px solid #e4e0d8;
+}
+
+body > center a {
+    text-decoration: none;
+}
+
+body > center button {
+    margin: 4px;
+
+    padding: 8px 17px;
+
+    border: 1px solid #d4cec3;
+    border-radius: 4px;
+
+    background-color: #ffffff;
+    color: #444444;
+
+    font-size: 13px;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+body > center button:hover {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #333333;
+}
+
+
+/* =========================
+   GENERAL BUTTONS
+   ========================= */
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================
+   LINKS
+   ========================= */
+
+a {
+    color: inherit;
+}
+
+
+/* =========================
+   INPUTS
+   ========================= */
+
+input {
+    font-family: Arial, sans-serif;
+}
+
+.links input.active-filter {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+/* =========================
+   RESPONSIVE NAVBAR
+   ========================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+        flex-direction: column;
+        padding: 18px 25px;
+    }
+
+    .links {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .links {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .links form:first-child {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .links input[type="text"] {
+        width: 220px;
+    }
+
+    body > center {
+        padding: 15px 10px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .logo h2 {
+        font-size: 22px;
+    }
+
+    .links {
+        gap: 8px;
+    }
+
+    .links input[type="text"] {
+        width: 170px;
+    }
+
+    .links a,
+    .links input[type="submit"] {
+        font-size: 12px;
+    }
+}

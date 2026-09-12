@@ -1,0 +1,79 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/my_orders.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="orders-container">
+
+<h1 class="orders-title">My Orders</h1>
+
+{% if orders %}
+
+    <div class="orders-list">
+
+        {% for i in orders %}
+
+            <div class="order-card">
+
+                <div class="order-header">
+                    <h2>{{ i.pname }}</h2>
+                    <span>Order #{{ forloop.counter }}</span>
+                </div>
+
+                <div class="order-details">
+
+                    <p>
+                        <strong>Price:</strong>
+                        ₹{{ i.price }}
+                    </p>
+
+                    <p>
+                        <strong>Quantity:</strong>
+                        {{ i.quantity }}
+                    </p>
+
+                    <p>
+                        <strong>Total:</strong>
+                        ₹{{ i.total_price }}
+                    </p>
+
+                    <p>
+                        <strong>Order Date:</strong>
+                        {{ i.order_date }}
+                    </p>
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+{% else %}
+
+    <div class="empty-orders">
+
+        <h2>No Orders Yet</h2>
+
+        <p>You have not placed any orders yet.</p>
+
+    </div>
+
+{% endif %}
+
+<a href="{% url 'home' %}" class="continue-shopping">
+    Continue Shopping
+</a>
+<a href="{% url 'profile' %}">
+    <button type="button" class="back-profile">Back to Profile</button>
+</a>
+</div>
+
+{% endblock %}

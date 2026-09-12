@@ -1,0 +1,128 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="register-container">
+
+    <div class="register-card">
+
+        <h1>Create Account</h1>
+
+        {% if messages %}
+            {% for i in messages %}
+                <p class="message">{{ i }}</p>
+            {% endfor %}
+        {% endif %}
+
+        <form action="" method="POST">
+
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label>First Name</label>
+
+                <input
+                    type="text"
+                    name="fname"
+                    placeholder="Enter First Name"
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Last Name</label>
+
+                <input
+                    type="text"
+                    name="lname"
+                    placeholder="Enter Last Name"
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter Email"
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Username</label>
+
+                <input
+                    type="text"
+                    name="uname"
+                    placeholder="Choose a Username"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    name="pasw"
+                    id="register-password"
+                    placeholder="Enter Password"
+                    minlength="8"
+                    required
+                >
+
+                <button
+                    type="button"
+                    onclick="togglePassword('register-password', this)"
+                >
+                    Show
+                </button>
+            </div>
+
+            <div class="form-group">
+                <label>Confirm Password</label>
+
+                <input
+                    type="password"
+                    name="confirm_pasw"
+                    id="register-confirm-password"
+                    placeholder="Confirm Password"
+                    minlength="8"
+                    required
+                >
+
+                <button
+                    type="button"
+                    onclick="togglePassword('register-confirm-password', this)"
+                >
+                    Show
+                </button>
+            </div>
+
+            <button type="submit">Create Account</button>
+
+        </form>
+
+        <div class="register-links">
+
+            <p>
+                Already registered?
+                <a href="{% url 'login_' %}">
+                    Login
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{% static 'js/password.js' %}"></script>
+
+{% endblock %}

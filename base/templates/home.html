@@ -1,0 +1,84 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="home-container">
+{% if messages %}
+    {% for i in messages %}
+        <h2 class="message">{{ i }}</h2>
+    {% endfor %}
+{% endif %}
+
+<h1 class="page-title">ShopSphere</h1>
+{% if trend %}
+
+    <h2 class="filter-title">🔥 Trending Products</h2>
+
+{% elif offer %}
+
+    <h2 class="filter-title">🏷️ Special Offers</h2>
+
+{% else %}
+
+    <h2 class="filter-title">🛒 All Products</h2>
+
+{% endif %}
+<div class="product-grid">
+
+    {% for i in all_products %}
+
+        <div class="product-card">
+            {% if i.trending %}
+                <span class="product-badge trending-badge">🔥 Trending</span>
+            {% endif %}
+                    
+            {% if i.offer %}
+                <span class="product-badge offer-badge">🏷️ Offer</span>
+            {% endif %}
+            <a href="{% url 'product_detail' i.id %}">
+                <img
+                    src="{{ i.pimage.url }}"
+                    alt="{{ i.pname }}"
+                    class="product-image"
+                >
+            </a>
+
+            <div class="product-info">
+
+                <a href="{% url 'product_detail' i.id %}"
+                   class="product-name">
+                    {{ i.pname }}
+                </a>
+
+                <p class="product-price">₹{{ i.price }}</p>
+
+                <div class="product-actions">
+
+                    <a href="{% url 'add_to_cart' i.id %}">
+                        <button>Add to Cart</button>
+                    </a>
+
+                    <a href="{% url 'buy_now' i.id %}">
+                        <button>Buy Now</button>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,7 @@
+.env
+venv/
+.venv/
+__pycache__/
+*.pyc
+db.sqlite3
+static/images/profile_pics/adharcard.jpeg

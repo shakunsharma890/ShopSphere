@@ -1,0 +1,164 @@
+/* =========================
+   PROFILE PAGE
+   ========================= */
+
+.profile-container {
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+
+/* Profile card */
+
+.profile-card {
+    background-color: #ffffff;
+
+    border: 1px solid #e4e0d8;
+
+    padding: 40px;
+
+    box-shadow: 0 5px 20px rgba(40, 35, 30, 0.06);
+}
+
+
+/* Heading */
+
+.profile-card h1 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: 500;
+
+    color: #292929;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+/* Profile picture */
+
+.profile-picture {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.profile-picture img {
+    width: 140px;
+    height: 140px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 1px solid #d8d3ca;
+}
+
+
+/* Profile details */
+
+.profile-details {
+    border-top: 1px solid #eeeae3;
+}
+
+
+.profile-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #eeeae3;
+}
+
+.profile-row span {
+    color: #777777;
+    font-size: 14px;
+}
+
+.profile-row strong {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* Action links */
+
+.profile-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.profile-actions a {
+    padding: 11px;
+
+    text-align: center;
+
+    border: 1px solid #d4cec3;
+
+    color: #444444;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.2s ease;
+}
+
+.profile-actions a:hover {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #333333;
+}
+
+
+/* Back */
+
+.back-home {
+    display: block;
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #555555;
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.back-home:hover {
+    color: #111111;
+    text-decoration: underline;
+}
+
+
+/* Mobile */
+
+@media (max-width: 550px) {
+
+    .profile-container {
+        margin: 30px auto;
+    }
+
+    .profile-card {
+        padding: 25px;
+    }
+
+    .profile-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-row {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+}

@@ -1,0 +1,41 @@
+
+{% extends 'main.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/order_success.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="order-success-container">
+
+    <div class="order-success-card">
+
+        <h1>Order Placed Successfully</h1>
+
+        <p>
+            Thank you for shopping with ShopSphere.
+        </p>
+
+        <p>
+            Your order has been placed successfully.
+        </p>
+
+        <div class="success-actions">
+
+            <a href="{% url 'home' %}">
+                Continue Shopping
+            </a>
+
+            <a href="{% url 'my_orders' %}">
+                View My Orders
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

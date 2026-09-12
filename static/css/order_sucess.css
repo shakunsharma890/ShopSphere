@@ -1,0 +1,68 @@
+.order-success-container {
+    max-width: 650px;
+    margin: 70px auto;
+    padding: 0 20px;
+}
+
+.order-success-card {
+    background-color: #ffffff;
+    border: 1px solid #e4e0d8;
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(40, 35, 30, 0.06);
+}
+
+.order-success-card h1 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: #292929;
+    margin-bottom: 20px;
+}
+
+.order-success-card p {
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.success-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.success-actions a {
+    padding: 11px 18px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    background-color: #333333;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.success-actions a:hover {
+    background-color: #111111;
+}
+
+@media (max-width: 550px) {
+    .order-success-container {
+        margin: 40px auto;
+    }
+
+    .order-success-card {
+        padding: 35px 25px;
+    }
+
+    .success-actions {
+        flex-direction: column;
+    }
+
+    .success-actions a {
+        display: block;
+    }
+}
